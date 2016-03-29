@@ -18,7 +18,7 @@ RUN chown -R teamspeak.teamspeak /opt/teamspeak/
 
 USER teamspeak
 
-VOLUME /opt/teamspeak/ts3server.ini /opt/teamspeak/ts3db_mysql.ini /opt/teamspeak/logs
+VOLUME /opt/teamspeak/logs
 
 ENTRYPOINT ["/opt/teamspeak/ts3server_minimal_runscript.sh"]
 CMD ["inifile=$TS3_SERVER_INI"]
