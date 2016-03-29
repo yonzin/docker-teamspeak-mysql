@@ -2,6 +2,7 @@
 teamspeak using mysql database
 
 add missing mysql libraries libmysqlclient.so.15 and libts3db_mysql.so
+
 Installation
 _____
 	git clone https://github.com/yonzin/docker-teamspeak-mysql
@@ -11,11 +12,11 @@ _____
 Usage
 _____
 default ports are 9987, 10011, 30033
-	docker run -d -name teamspeak -p 9987:9987/udp -p 10011:10011 -p 30033:30033 
-		-v /opt/teamspeak/logs:/opt/teamspeak/logs \
-		-v /opt/teamspeak/ts3server.ini:/opt/teamspeak/ts3server.ini \
-		- /opt/teamspeak/ts3db_mysql.ini:/opt/teamspeak/ts3db_mysql.ini \
-		 yonzin/teamspeak
+	docker run -d -name teamspeak -p 9987:9987/udp -p 10011:10011 -p 30033:30033  \
+	-v /opt/teamspeak/logs:/opt/teamspeak/logs \
+	-v /opt/teamspeak/ts3server.ini:/opt/teamspeak/ts3server.ini \
+	-v /opt/teamspeak/ts3db_mysql.ini:/opt/teamspeak/ts3db_mysql.ini \
+	 yonzin/teamspeak
 
 Volumes
 _____
