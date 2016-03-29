@@ -2,8 +2,6 @@ FROM mbentley/teamspeak
 
 USER root
 
-ENV TS3_SERVER_INI "/opt/teamspeak/ts3server.ini"
-
 ADD files/libs/libts3db_mysql.so /opt/teamspeak/libts3db_mysql.so
 
 ADD files/libs/libmysqlclient.so.15 /usr/lib/libmysqlclient.so.15
@@ -21,4 +19,5 @@ USER teamspeak
 VOLUME /opt/teamspeak/logs
 
 ENTRYPOINT ["/opt/teamspeak/ts3server_minimal_runscript.sh"]
-CMD ["inifile=$TS3_SERVER_INI"]
+
+CMD ["inifile=/opt/teamspeak/ts3server.ini"]
