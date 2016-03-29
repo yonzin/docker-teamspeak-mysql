@@ -29,3 +29,14 @@ list of available volumes:
 * /opt/teamspeak/ts3db_mysql.ini : teaspeak database config file
 * /opt/teamspeak/logs : teamspeak logs
 
+## Mysql ini file
+File from /opt/teamspeak/ts3db_mysql.ini
+```
+[config]
+host=mysql_host
+port=mysql_port
+username=mysql_username
+password=mysql_password
+database=mysql_database
+socket=
+```
